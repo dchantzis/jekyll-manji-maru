@@ -1,0 +1,103 @@
+---
+layout: default
+---
+
+{% assign album_images = "" | split:"|" %}
+{% assign images = site.images | sort:"order" %}
+{% for image in images %}
+  {% if image.albums contains page.title | downcase %}
+    {% assign album_images = album_images | push: image %}
+  {% endif %}
+{% endfor %}
+
+<section class="{{page.sectionClass}}">
+
+  {% if page.display-info %}
+  <div class="grid">
+    <div class="unit [ xs-1 s-1 l-4-5 ] island">
+      <h1 class="album-title brand-highlight push-1-2 mega">{{ page.title | capitalize }}</h1>
+
+        {% if page.skills or page.client %}
+          <dl class="list-group clearfix micro push-1-2">
+            {% if page.skills %}
+              <dt class="brand-highlight">Skills:</dt>
+              <dd class="">{{page.skills}}</dd>
+            {% endif %}
+            {% if page.client %}
+              <dt class="brand-highlight">Client:</dt>
+              <dd class="">{{page.client}}</dd>
+            {% endif %}
+          </dl>
+        {% endif %}
+        <div class="album-info push-0 milli p-container">{{ content | markdownify }}</div>
+
+      {% if page.enableLightbox %}
+        <div class="enable-slideshow brand-highlight text-upper micro pad-t pad-b hidden">
+          <a href="#slideshow">Open slideshow</a>
+        </div>
+      {% endif %}
+
+      <div class="social-share-buttons">
+        {% include social-share-buttons.html %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+      {% if page.enableLightbox %}
+        <div class="enable-slideshow brand-highlight text-upper micro pad-t pad-b hidden">
+          <a href="#slideshow">Open slideshow</a>
+        </div>
+      {% endif %}
+
+  <div class="album-images pad-t-1-2">
+  {% if album_images.size >= 1 %}
+
+    {% assign mod = 1 %}
+    {% case page.gridType %}
+      {% when 'l-4-5' %}
+        {% assign mod = 1 %}
+      {% when 'l-1-2' %}
+        {% assign mod = 2 %}
+      {% when 'l-1-3' %}
+        {% assign mod = 3 %}
+      {% when 'l-1-4' %}
+        {% assign mod = 4 %}
+    {% endcase %}
+
+    {% for image in album_images | sort:"order" %}
+
+      {% assign loopindex = forloop.index0 | modulo:mod %}
+
+      {% if forloop.first or 0 == loopindex %}
+        <div class="grid">
+      {% endif %}
+        <div class="unit [ xs-1 s-1 m-1-2 {{page.gridType}} ] image">
+          {% if page.enableLightbox %}
+            <div class="active-slideshow" data-image="{{forloop.index0}}">
+            {% else %}
+            <a href="{{site.baseurl}}{{image.url}}">
+          {% endif %}
+          {% include image.html loadType = 'album-view' %}
+          {% if page.enableLightbox %}
+            </div>
+          {% else %}
+            </a>
+          {% endif %}
+        </div>
+      {% if forloop.last or mod == loopindex %}
+        </div>
+      {% endif %}
+
+    {% endfor %}
+
+  {% endif %}
+  </div>
+
+  {% include pagination/album-full-pagination.html %}
+
+</section>
+
+{% if page.enableLightbox %}
+  {% include slideshow.html %}
+{% endif %}
