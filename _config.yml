@@ -16,7 +16,7 @@ social:
     account-id:
   - provider: pinterest
     account-id:
-include-analytics-tracking: true
+include-analytics-tracking: false
 google-api-key:
 analytics :
   provider : google
