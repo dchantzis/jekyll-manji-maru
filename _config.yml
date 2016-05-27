@@ -33,6 +33,9 @@ collections:
   images:
     output: true
     permalink: /image/:path/
+  tags:
+    output: true
+    permalink: /tag/:path/
 gems: [
     jekyll-paginate,
     jekyll/tagging,

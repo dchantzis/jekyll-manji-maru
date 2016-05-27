@@ -4,7 +4,7 @@ title: Ninth post with more characters in title
 titleBefore:
 titleAfter:
 meta: Post description
-summary: Post summary
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor libero vel hendrerit accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 author:
 image:
 keywords: ["dog", "cat", "raccoon", "fox"]
@@ -18,21 +18,13 @@ related:
   - Eighth post
 images:
   - title: Image 1
-    date-created: 2016
-    dimensions: 9 x 10 cm
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    materials: watercolours on cold-pressed paper
     image-order: 1
-    fullsize-src: https://placeholdit.imgix.net/~text?txtsize=84&bg=cccccc&txt=320x477&w=320&h=477
-    thumbnail-src:
+    src: https://placeholdit.imgix.net/~text?txtsize=84&bg=cccccc&txt=320x477&w=320&h=477
   - title: Image 2
-    date-created: 2016
-    dimensions: 9 x 10 cm
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    materials: watercolours on cold-pressed paper
     image-order: 2
-    fullsize-src: https://placeholdit.imgix.net/~text?txtsize=84&bg=cccccc&txt=320x477&w=320&h=477
-    thumbnail-src:
+    src: https://placeholdit.imgix.net/~text?txtsize=84&bg=cccccc&txt=320x477&w=320&h=477
 sitemap:
   lastMod: 2016-03-07
   priority: 0.7
@@ -44,4 +36,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus est, blandi
 
 ![https://placeholdit.imgix.net/~text?txtsize=84&bg=cccccc&txt=320x477&w=320&h=477](https://placeholdit.imgix.net/~text?txtsize=84&bg=cccccc&txt=320x477&w=320&h=477)
 
-Integer libero ligula, mattis venenatis malesuada in, interdum et tortor. Integer quis ullamcorper ante.
+Cras ligula risus, tincidunt in eros sed, dictum cursus felis.
+Morbi non nulla pharetra, iaculis turpis non, laoreet enim.
+
+Morbi lectus tortor, sagittis in tristique consectetur, porta at quam.
+
+Maecenas feugiat rutrum diam, ut efficitur est egestas eu. Curabitur quis est bibendum, hendrerit nulla a, consectetur mauris.
+Sed pretium lorem ut commodo maximus. Duis hendrerit molestie tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla consequat commodo nunc, quis pharetra est congue sed. Nam sed posuere neque. Mauris id risus velit.
+Donec dui nibh, volutpat eget suscipit in, varius vitae massa.
+
+Morbi sit amet nulla feugiat, accumsan lectus sit amet, commodo sem. Curabitur at massa malesuada tortor malesuada tempus a ut nulla. Etiam at dui dui.

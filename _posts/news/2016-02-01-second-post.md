@@ -4,7 +4,7 @@ title: Second post
 titleBefore:
 titleAfter:
 meta: Post description
-summary: Post summary
+summary: Ut sit amet sem sed eros sagittis facilisis in quis ex. Donec suscipit mi in sapien cursus aliquet.
 author:
 image:
 keywords:
@@ -17,13 +17,9 @@ tags:
 related:
 images:
   - title: Image 1
-    date-created: 2016
-    dimensions: 9 x 10 cm
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    materials: watercolours on cold-pressed paper
     image-order: 1
-    fullsize-src: https://placeholdit.imgix.net/~text?txtsize=84&bg=cccccc&txt=320x477&w=320&h=477
-    thumbnail-src:
+    src: https://placeholdit.imgix.net/~text?txtsize=84&bg=cccccc&txt=320x477&w=320&h=477
 sitemap:
   lastMod: 2016-02-01
   priority: 0.7

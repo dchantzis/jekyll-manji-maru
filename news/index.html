@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: posts
 title: News
 titleBefore:
 titleAfter:
@@ -19,57 +19,3 @@ sitemap:
   include: true
 ---
 
-<section class="{{page.sectionClass}} pad-t pad-b-2 push-2">
-
-    <div class="content-container island-1-2 gutter brand-color-light">
-      <div class="restricted-content">
-
-        <h1 class="page-title brand-highlight push-1-2 mega">{{ page.title | capitalize }}</h1>
-
-        {% for post in paginator.posts %}
-          <article itemscope itemtype="http://schema.org/Article" class="pad-b">
-            <h2 class="brand-highlight push-1-4 mega">
-              <a href="{{site.baseurl}}{{post.url}}">{{post.title | strip | upcase}}</a>
-            </h2>
-            <p class="milli push-1-2">
-              <time itemprop="datePublished" datetime="{{post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %d, %Y" }}</time>
-            </p>
-            <div class="push-0 milli p-container">{{ post.content | markdownify }}</div>
-
-            {% assign post_images = "" | split:"|" %}
-            {% for image in post.images %}
-              {% assign post_images = post_images | push: image %}
-            {% endfor %}
-
-            {% assign images = site.images | sort:"order" %}
-            {% for image in images %}
-              {% if image.posts contains post.title | downcase %}
-                {% assign post_images = post_images | push: image %}
-              {% endif %}
-            {% endfor %}
-
-            {% if post_images.size >= 1 %}
-              <div class="push-0 pad-t">
-                {% for image in post_images %}
-                  {% include image.html %}
-                {% endfor %}
-              </div>
-            {% endif %}
-
-            {% if false == forloop.last %}
-            <div class="island-2">
-              <hr class="hr pad-b-1-4">
-            </div>
-            {% endif %}
-
-          </article>
-        {% endfor %}
-
-        <div class="brand-color-light">
-          {% include pagination/default-post-pagination.html %}
-        </div>
-
-      </div>
-    </div>
-
-</section>

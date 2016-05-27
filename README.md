@@ -25,7 +25,7 @@ This theme includes the following:
 - Syntax highlighting
 - Pure CSS toggleable navigation
 - Lightbox presentation for images with transitions, controls, navigation buttons and keyboard shortcuts.
-- CSS3 full-screen responsive image carousel with transitions, controls. navigation buttons and keyboard shortcuts.
+- CSS3 full-screen responsive image carousel with transitions, controls, navigation buttons and keyboard shortcuts.
 - Option to select the image grid type of an album
 - Social media share buttons for posts, albums and images
 - Disqus comments

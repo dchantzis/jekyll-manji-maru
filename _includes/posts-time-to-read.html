@@ -1,7 +1,7 @@
 {% if site.enablePostsTimeToRead %}
 
   {% capture word_count %}
-    {{ page.content | strip_html | strip_newlines | number_of_words }}
+    {{ post.content | strip_html | strip_newlines | number_of_words }}
   {% endcapture %}
 
   {% capture word_count_time %}

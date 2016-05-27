@@ -4,7 +4,7 @@ title: Forth post
 titleBefore:
 titleAfter:
 meta: Post description
-summary: Post summary
+summary: Cras vel lacus pretium, ultrices arcu sit amet, sodales risus. Mauris mattis tempor velit, id vehicula neque elementum sed. Ut vulputate enim congue, finibus enim et, pulvinar ex.
 author:
 image:
 keywords:
@@ -17,21 +17,13 @@ tags:
 related:
 images:
   - title: Image 1
-    date-created: 2016
-    dimensions: 9 x 10 cm
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    materials: watercolours on cold-pressed paper
     image-order: 1
-    fullsize-src: https://placeholdit.imgix.net/~text?txtsize=84&bg=cccccc&txt=320x477&w=320&h=477
-    thumbnail-src:
+    src: https://placeholdit.imgix.net/~text?txtsize=84&bg=cccccc&txt=320x477&w=320&h=477
   - title: Image 2
-    date-created: 2016
-    dimensions: 9 x 10 cm
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    materials: watercolours on cold-pressed paper
     image-order: 2
-    fullsize-src: https://placeholdit.imgix.net/~text?txtsize=84&bg=cccccc&txt=320x477&w=320&h=477
-    thumbnail-src:
+    src: https://placeholdit.imgix.net/~text?txtsize=84&bg=cccccc&txt=320x477&w=320&h=477
 sitemap:
   lastMod: 2016-03-02
   priority: 0.7
@@ -42,3 +34,5 @@ sitemap:
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus est, blandit ac felis sit amet, hendrerit laoreet risus. Donec efficitur quam magna, ac hendrerit sapien congue in.
 
 Integer libero ligula, mattis venenatis malesuada in, interdum et tortor. Integer quis ullamcorper ante.
+
+Mauris tempor rutrum augue a fermentum. Sed auctor neque imperdiet turpis dictum imperdiet. Praesent sodales commodo ipsum et dapibus.

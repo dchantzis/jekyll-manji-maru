@@ -352,10 +352,6 @@ tbody tr:nth-child(odd) th {
     padding-right: 1.4rem;
   }
 
-  .pagination {
-    text-align: center;
-  }
-
   section.simple .restricted-content {
     width: 40rem;
     margin-left: auto;

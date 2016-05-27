@@ -11,10 +11,21 @@ layout: default
 
       {% include post-meta-tags.html %}
 
-        <h1 class="brand-highlight push-1-4 mega">{{page.title | strip | upcase}}</h1>
+        <h1 class="brand-highlight push-1-4 mega">{{page.title | strip | capitalize}}</h1>
         <p class="milli push-1-2">
           <time itemprop="datePublished" datetime="{{page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %d, %Y" }}</time>
+             {% if page.tags.size >= 1 %}
+              / Tags:
+              {% for item in page.tags %}
+                {% capture post-tag-slug %}/tag/{{ item | slugify }}/{% endcapture %}
+                {% assign tag-info = site.tags | where:"url",post-tag-slug %}
+                {% assign tag-info = tag-info | first %}
+                <a href="{{site.baseurl}}{{tag-info.url}}">{{tag-info.title}}</a>
+                {% if forloop.last == false %}, {% endif %}
+              {% endfor %}
+            {% endif %}
         </p>
+        {% assign post = page %}
         {% include posts-time-to-read.html %}
         <div class="push-0 milli p-container">{{ content | markdownify }}</div>
         <div class="social-share-buttons">
@@ -36,7 +47,7 @@ layout: default
         {% if post_images.size >= 1 %}
           <div class="push-0 pad-t">
             {% for image in post_images %}
-              {% include image.html %}
+              {% include post-image.html %}
             {% endfor %}
           </div>
         {% endif %}
