@@ -20,7 +20,7 @@ client: personal
 skills: watercolours
 order: 4
 permalink: /collection-2/:path/
-gridType: 'l-1-2'
+gridType: 'l-1-4'
 display-info: true
 display-social-media-share-buttons: false
 enableLightbox: true
