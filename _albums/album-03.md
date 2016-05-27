@@ -9,11 +9,11 @@ author:
 image:
 keywords:
 sectionClass: album
-includeInNavigation: false
+includeInNavigation: true
 weight: 0
 isFamilyFriendly: true
 cover:
-  image: https://placeholdit.imgix.net/~text?txtsize=84&bg=E4E6ED&txt=image-3&w=1653&h=1167
+  image: https://placeholdit.imgix.net/~text?txtsize=84&bg=E4E6ED&txt=album-3&w=1653&h=1167
   theme: light
 description: Album 03 description
 client:
@@ -25,7 +25,7 @@ display-info: false
 display-social-media-share-buttons: false
 enableLightbox: true
 enableCarousel: false
-category: collection 2
+parentPage: collection 2
 sitemap:
   lastMod: 2016-01-01
   priority: 0.7

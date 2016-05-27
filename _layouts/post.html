@@ -2,16 +2,16 @@
 layout: default
 ---
 
-<section class="{{page.sectionClass}}">
-  <div class="grid">
+<section class="{{page.sectionClass}} simple pad-t pad-b-2 push-2">
 
-    <div class="unit [ xs-1 l-2-3 ]">
+    <div class="content-container island-1-2 gutter brand-color-light">
+      <div class="restricted-content">
 
-      <article itemscope itemtype="http://schema.org/BlogPosting">
+      <article class="push-2" itemscope itemtype="http://schema.org/BlogPosting">
 
       {% include post-meta-tags.html %}
 
-        <h1 class="brand-highlight push-1-4 kilo">{{page.title | strip | upcase}}</h1>
+        <h1 class="brand-highlight push-1-4 mega">{{page.title | strip | upcase}}</h1>
         <p class="milli push-1-2">
           <time itemprop="datePublished" datetime="{{page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %d, %Y" }}</time>
         </p>
@@ -41,27 +41,28 @@ layout: default
           </div>
         {% endif %}
 
-        {% if true == site.disqus.comments and true == page.comments %}
-          <div class="pad-t-1-2 pad-b-1-2">
-            {% include disqus-comments.html %}
-          </div>
-        {% endif %}
-
       </article>
-      {% include pagination/post-pagination.html %}
-    </div>
 
-    <div class="unit [ xs-1 l-1-3 ]">
-      <aside class="aside-container push-0">
-        {% include related-posts.html %}
-
-        <div class="hr-container island-2">
-          <hr class="hr pad-b-1-4">
+      {% if true == site.disqus.comments and true == page.comments %}
+        <div class="pad-t-1-2 pad-b-1-2">
+          {% include disqus-comments.html %}
         </div>
+      {% endif %}
 
-        {% include instagram-feed.html %}
-      </aside>
+      <div class="island-2">
+        <hr class="hr pad-b-1-4">
+      </div>
+
+      <div class="pad-b-2 brand-color-light">
+        {% include related-posts.html %}
+      </div>
+
+      <div class="brand-color-light">
+        {% include pagination/post-pagination.html %}
+      </div>
+
     </div>
+
 
   </div>
 

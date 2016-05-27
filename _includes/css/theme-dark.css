@@ -92,11 +92,6 @@
 
 .js-dark .main-nav .sub-main-nav ul {
   background-color: rgba(0, 0, 0, 1);
-
-  -moz-transition: background-color 1000ms ease-in-out;
-  -o-transition: background-color 1000ms ease-in-out;
-  -webkit-transition: background-color 1000ms ease-in-out;
-  transition: background-color 1000ms ease-in-out;
 }
 
 .js-dark .main-nav .sub-main-nav ul::before {

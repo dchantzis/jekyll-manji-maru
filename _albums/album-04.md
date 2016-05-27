@@ -9,23 +9,23 @@ author:
 image:
 keywords:
 sectionClass: album
-includeInNavigation: false
+includeInNavigation: true
 weight: 0
 isFamilyFriendly: true
 cover:
-  image: https://placeholdit.imgix.net/~text?txtsize=84&bg=F2E0CB&txt=image-4&w=1653&h=1167
+  image: https://placeholdit.imgix.net/~text?txtsize=84&bg=F2E0CB&txt=album-4&w=1653&h=1167
   theme: dark
 description: Album 04 description
 client: personal
 skills: watercolours
 order: 4
 permalink: /collection-2/:path/
-gridType: 'l-1-3'
-display-info: false
+gridType: 'l-1-2'
+display-info: true
 display-social-media-share-buttons: false
 enableLightbox: true
 enableCarousel: false
-category: collection 2
+parentPage: collection 2
 sitemap:
   lastMod: 2016-01-01
   priority: 0.7

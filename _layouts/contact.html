@@ -2,27 +2,35 @@
 layout: default
 ---
 
-<section class="{{page.sectionClass}} pad-b-2">
+<section class="{{page.sectionClass}} pad-t pad-b-2 push-2">
 
-  <div class="grid">
-    <div class="unit [ xs-1 s-1 l-4-5 ] ">
-      <h1 class="page-title brand-highlight push-1-2 peta">{{ page.title | strip | capitalize }}</h1>
-      <div class="page-info push-0 milli p-container">{{ content | markdownify }}</div>
-    </div>
-  </div>
+  <div class="content-container island-1-2 gutter brand-color-light">
 
-  <div class="grid">
-    <div class="unit [ xs-1 s-1 l-2-5 ]">
-      <div class="push">
-      {% include forms/contact-form.html %}
+    <div class="restricted-content">
+
+      {% if page.display-info %}
+        <h1 class="page-title brand-highlight push-1-2 mega">{{ page.title | strip | capitalize }}</h1>
+        <div class="page-info push-0 milli p-container">{{ content | markdownify }}</div>
+      {% endif %}
+
+      <div class="pad-t">
+        <div class="pad-t pad-b-1-4">
+        {% include forms/contact-form.html %}
+        </div>
+
+        <div class="island-2">
+          <hr class="hr pad-b-1-4">
+        </div>
+
+        <div class="contact-map-container brand-nice pad-t">
+          <div class="push-0 micro p-container pad-b-2">
+            {% include contact-info.html %}
+          </div>
+          {% include google-maps.html %}
+        </div>
       </div>
     </div>
-    <div class="unit [ xs-1 s-1 l-1-2 ] contact-map-container">
-      <div class="push-0 micro p-container">
-        {% include contact-info.html %}
-      </div>
-      {% include google-maps.html %}
-    </div>
+
   </div>
 
 </section>

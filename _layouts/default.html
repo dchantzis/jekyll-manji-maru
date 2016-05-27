@@ -34,20 +34,16 @@
   {% include header.html %}
 
   <main class="main-content {% if 'default' == page.layout or 'collection' == page.layout %}main-content-fade{% endif %}">
+    <div class="main-content-overlay"></div>
     {{ content | strip }}
   </main>
 
   <script src="{{site.baseurl}}/assets/js/jquery-1.12.3.min.js"></script>
   <script src="{{site.baseurl}}/assets/js/jquery.mobile.custom.min.js"></script>
-  <script src="{{site.baseurl}}/assets/js/jquery.scrollTo.min.js"></script>
-  <script src="{{site.baseurl}}/assets/js/jquery.waypoints.min.js"></script>
   <script src="{{site.baseurl}}/assets/js/main.js"></script>
   <script src="{{site.baseurl}}/assets/js/forms.js"></script>
   <script src="{{site.baseurl}}/assets/js/slideshow.js"></script>
   <script src="{{site.baseurl}}/assets/js/social-media-share.js"></script>
-  {% if site.enableSiteSearch %}
-    <script src="{{site.baseurl}}/assets/js/search.js"></script>
-  {% endif %}
   <script src="{{site.baseurl}}/assets/js/album-cover-carousel.js"></script>
 
   {% if page.url contains "contact" %}

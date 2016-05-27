@@ -1,6 +1,6 @@
 {% assign albums = site.albums | where:"layout","album" | sort:"order" %}
 {% if "collection" == page.layout %}
-  {% assign albums = albums | where:"category",page.title %}
+  {% assign albums = albums | where:"parentPage",page.title %}
 {% endif %}
 
 <div class="album-cover-carousel push-2">
@@ -27,7 +27,7 @@
 
       <div class="island-1-4 gutter-1-2 carousel-item-content text-left">
         <a href="{{site.baseurl}}{{item.url}}" title="{{item.title | capitalize}}">
-          <span class="micro"><em>{{item.category | upcase}} / </em></span><span class="micro">{{item.title | upcase}}</span>
+          <span class="micro"><em>{{item.parentPage | upcase}} / </em></span><span class="micro">{{item.title | upcase}}</span>
         </a>
       </div>
     </li>

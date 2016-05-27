@@ -9,7 +9,6 @@ body {
   color: rgba(0, 0, 0, 1);
 }
 
-
 .brand-nice {
   font-family: 'Lora', serif;
 }
@@ -24,7 +23,7 @@ body {
 }
 
 .brand-color-light {
-  color: rgba(255, 255, 255, 1);
+  color: rgba(117, 115, 115, 1);
 }
 
 .brand-color-dark {
@@ -33,7 +32,7 @@ body {
 
 .masthead {
   position: relative;
-  z-index: 10;
+  z-index: 15;
 }
 
 .main-content {
@@ -41,12 +40,12 @@ body {
 }
 
 .main-content-fade::before {
-  content: "";
+  content: " ";
+  position:fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  position:fixed;
   z-index: -2;
 
   -webkit-transition: all 500ms ease-in-out;
@@ -56,8 +55,35 @@ body {
 }
 
 .masthead:hover ~ .main-content-fade::before {
-  background-color: rgba(0,0,0, 0.2);
+  /*background-color: rgba(0,0,0, 0.2);*/
   z-index: 9;
+}
+
+.masthead ~ .main-content-fade > .main-content-overlay {
+  content: " ";
+  position:fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+
+  background: rgba(0,0,0, 0);
+  background: -webkit-radial-gradient(circle, rgba(255,255,255, 0.1), rgba(0,0,0, 0.15));
+  background: -o-radial-gradient(circle, rgba(255,255,255, 0.1), rgba(0,0,0, 0.15));
+  background: -moz-radial-gradient(circle, rgba(255,255,255, 0.1), rgba(0,0,0, 0.15));
+  background: radial-gradient(circle, rgba(255,255,255, 0.1), rgba(0,0,0, 0.15));
+
+  opacity: 0;
+
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.masthead:hover ~ .main-content-fade > .main-content-overlay {
+  opacity: 1;
+  z-index: 10;
 }
 
 .logo {
@@ -137,6 +163,29 @@ body {
   text-align: center;
 }
 
+.pagination ul li em {
+  font-style: normal;
+}
+
+.pagination ul li a.brand-color-light,
+.pagination ul li a.brand-color-light:link,
+.pagination ul li a.brand-color-light:active{
+  color: rgba(117, 115, 115, 1);
+}
+
+.pagination-slim li:first-child::after {
+  content: "/";
+}
+
+.related-posts .related-post-date,
+.related-posts .related-post-title {
+  display: inline-block;
+}
+
+.related-posts .related-post-date::after {
+  content: " /";
+}
+
 .album-images .unit {
   margin-bottom: 2.6000rem;
 }
@@ -193,16 +242,37 @@ fieldset .field-error,
   border-radius: 2px;
 }
 
-.contact-info dt {
-  clear: left;
-  float: left;
-  margin-right: 0.5rem;
-}
 
-.contact-info dd {
+.album dl {
+
+}
+.album dt {
+  float: left;
+  margin-right: 0.35rem;
+  text-transform: uppercase;
+}
+.album dd {
   float: left;
   margin: 0;
+  margin-right: 0.75rem;
   padding: 0;
+}
+
+.about .graphic figcaption {
+  text-align: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 150px;
+  overflow: hidden;
+}
+
+hr {
+  margin: 0 auto;
+  border: 0;
+  width: 8rem;
+  border-bottom: 1px solid rgba(117, 115, 115, 1);
 }
 
 tbody tr:nth-child(odd) td,
@@ -261,9 +331,35 @@ tbody tr:nth-child(odd) th {
     margin-top: -0.3rem;
   }
 
+  .content-container {
+    padding: 0;
+  }
+
   .album-images .unit {
     padding: 0.7000rem;
     margin-bottom: 2.8000rem;
+  }
+
+  .album-images .unit:first-child {
+    padding-left: 0;
+  }
+  .album-images .unit:last-child {
+    padding-right: 0;
+  }
+
+  .content-container {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+  }
+
+  .pagination {
+    text-align: center;
+  }
+
+  section.simple .restricted-content {
+    width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }
@@ -279,8 +375,53 @@ tbody tr:nth-child(odd) th {
     padding: 0.7500rem;
     margin-bottom: 0;
   }
+  .album-images .unit:first-child {
+    padding-left: 0;
+  }
+  .album-images .unit:last-child {
+    padding-right: 0;
+  }
+
+  .content-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .restricted-content .album-images {
+    width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section.contact .restricted-content {
+    width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media only screen and (min-width: 62em) {
+
+  .restricted-content .album-images {
+    width: 52rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section.contact .restricted-content {
+    width: 40rem;
+        margin-left: auto;
+    margin-right: auto;
+  }
 
 }
 
 @media only screen and (min-width: 90em) {
+
+  .album-images {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
 }

@@ -1,5 +1,4 @@
-{% assign site-pages = site.pages | sort:"weight"  %}
-{% assign albums = site.albums | sort: "weight" %}
+{% assign site-pages = site.pages | where:"includeInNavigation","true" | where:"parentPage","" | sort:"weight" %}
 
 <nav class="navigation">
 
@@ -8,35 +7,41 @@
     <ul class="site-links {% if 'm-l-xl' == include.navType %}list-group-inline{% else %} list-group{% endif %} push-0">
       {% for item in site-pages %}
         {% if item.navigationSection contains include.navSection %}
+
             {% if item.url contains "page2" %}{% continue %}{% endif %}
-            {% if true == item.includeInNavigation %}
-              <li class="list-group__item {% if 'm-l-xl' == include.navType %}gutter-1-4{% else %}island-1-4{% endif %}">
-                <a class="{% if 'm-l-xl' == include.navType %}micro{% else %}mega{% endif %} {% if page.url == item.url %}current{% endif %}" href="{{site.baseurl}}{{item.url}}">
+
+              <li class="list-group__item {% if 'm-l-xl' == include.navType %}gutter-1-2{% else %}island-1-2 gutter-1-2{% endif %}">
+                <a class="{% if 'm-l-xl' == include.navType %}milli{% else %}mega{% endif %} {% if page.url == item.url %}current{% endif %}" href="{{site.baseurl}}{{item.url}}">
                   {{ item.title | upcase}}
                 </a>
 
-                <div class="sub-main-nav {% if 'm-l-xl' == include.navType %}pad-t-1-2{% else %}{% endif %}">
-                  {% if 'collection' == item.layout %}
-                    {% for album in albums %}
-                      {% if forloop.first %}
-                        <ul class="list-group {% if 'm-l-xl' == include.navType %}island{% else %}island-1-2{% endif %} push-0">
-                      {% endif %}
-                      {% if album.category == item.title %}
-                        <li class="{% if 'm-l-xl' == include.navType %}gutter{% else %}island-1-2{% endif %}">
-                          <a class="{% if 'm-l-xl' == include.navType %}micro{% else %}mega{% endif %} {% if page.url == album.url %}current{% endif %}" href="{{site.baseurl}}{{album.url}}">
-                            {{album.title | upcase}}
-                          </a>
-                        </li>
-                      {% endif %}
-                      {% if forloop.last %}
-                        </ul>
-                      {% endif %}
-                    {% endfor %}
-                  {% endif %}
-                </div>
+                  {% assign sub-pages = site.pages | where:"includeInNavigation","true" | where:"parentPage",item.title %}
+                  {% assign albums = site.albums | where:"includeInNavigation","true" | where:"parentPage",item.title | sort: "weight" %}
+
+                  {% for album in albums %}
+                    {% assign sub-pages = sub-pages | push: album %}
+                  {% endfor %}
+
+                  {% for sub-item in sub-pages %}
+                    {% if forloop.first %}
+                    <div class="sub-main-nav {% if 'm-l-xl' == include.navType %}pad-t-1-2{% else %}{% if forloop.first %}pad-t-1-2{% endif %}{% endif %}">
+                      <ul class="list-group {% if 'm-l-xl' == include.navType %}island{% else %}{% endif %} push-0">
+                    {% endif %}
+
+                      <li class="{% if 'm-l-xl' == include.navType %}gutter{% else %}island-1-2 gutter{% endif %}">
+                        <a class="{% if 'm-l-xl' == include.navType %}milli{% else %}mega{% endif %} {% if page.url == sub-item.url %}current{% endif %}" href="{{site.baseurl}}{{sub-item.url}}">
+                          {{sub-item.title | upcase}}
+                        </a>
+                      </li>
+
+                    {% if forloop.last %}
+                      </ul>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
 
               </li>
-            {% endif %}
+
         {% endif %}
       {% endfor %}
     </ul>

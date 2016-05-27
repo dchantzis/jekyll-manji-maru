@@ -10,45 +10,38 @@ layout: default
   {% endif %}
 {% endfor %}
 
-<section class="{{page.sectionClass}}">
+<section class="{{page.sectionClass}} pad-t pad-b-2 push-2">
 
   {% if page.display-info %}
-  <div class="grid">
-    <div class="unit [ xs-1 s-1 l-4-5 ] island">
-      <h1 class="album-title brand-highlight push-1-2 mega">{{ page.title | capitalize }}</h1>
+  <div class="content-container island-1-2 gutter brand-color-light">
+    <div class="grid">
+      <div class="unit [ xs-1 s-1 l-3-5 ]">
+        <h1 class="album-title brand-highlight push-1-2 mega">{{ page.title | capitalize }}</h1>
 
-        {% if page.skills or page.client %}
-          <dl class="list-group clearfix micro push-1-2">
-            {% if page.skills %}
-              <dt class="brand-highlight">Skills:</dt>
-              <dd class="">{{page.skills}}</dd>
-            {% endif %}
-            {% if page.client %}
-              <dt class="brand-highlight">Client:</dt>
-              <dd class="">{{page.client}}</dd>
-            {% endif %}
-          </dl>
-        {% endif %}
-        <div class="album-info push-0 milli p-container">{{ content | markdownify }}</div>
+          {% if page.skills or page.client %}
+            <dl class="list-group clearfix micro push-1-2">
+              {% if page.skills %}
+                <dt class="brand-highlight">Skills:</dt>
+                <dd class="">{{page.skills}}</dd>
+              {% endif %}
+              {% if page.client %}
+                <dt class="brand-highlight">Client:</dt>
+                <dd class="">{{page.client}}</dd>
+              {% endif %}
+            </dl>
+          {% endif %}
+          <div class="album-info push-0 milli p-container">{{ content | markdownify }}</div>
 
-      {% if page.enableLightbox %}
-        <div class="enable-slideshow brand-highlight text-upper micro pad-t pad-b hidden">
-          <a href="#slideshow">Open slideshow</a>
-        </div>
-      {% endif %}
+          {% if page.display-social-media-share-buttons %}
+            <div class="social-share-buttons">
+              {% include social-share-buttons.html %}
+            </div>
+          {% endif %}
 
-      <div class="social-share-buttons">
-        {% include social-share-buttons.html %}
       </div>
     </div>
   </div>
   {% endif %}
-
-      {% if page.enableLightbox %}
-        <div class="enable-slideshow brand-highlight text-upper micro pad-t pad-b hidden">
-          <a href="#slideshow">Open slideshow</a>
-        </div>
-      {% endif %}
 
   <div class="album-images pad-t-1-2">
   {% if album_images.size >= 1 %}
@@ -64,6 +57,7 @@ layout: default
       {% when 'l-1-4' %}
         {% assign mod = 4 %}
     {% endcase %}
+    {% assign mod_checker = mod | minus: 1 %}
 
     {% for image in album_images | sort:"order" %}
 
@@ -72,20 +66,23 @@ layout: default
       {% if forloop.first or 0 == loopindex %}
         <div class="grid">
       {% endif %}
+
         <div class="unit [ xs-1 s-1 m-1-2 {{page.gridType}} ] image">
+
           {% if page.enableLightbox %}
             <div class="active-slideshow" data-image="{{forloop.index0}}">
             {% else %}
             <a href="{{site.baseurl}}{{image.url}}">
           {% endif %}
-          {% include image.html loadType = 'album-view' %}
+            {% include image.html loadType = 'album-view' %}
           {% if page.enableLightbox %}
             </div>
           {% else %}
             </a>
           {% endif %}
         </div>
-      {% if forloop.last or mod == loopindex %}
+
+      {% if forloop.last or mod_checker == loopindex %}
         </div>
       {% endif %}
 
@@ -94,7 +91,9 @@ layout: default
   {% endif %}
   </div>
 
-  {% include pagination/album-full-pagination.html %}
+  <div class="content-container gutter brand-color-light">
+    {% include pagination/album-full-pagination.html %}
+  </div>
 
 </section>
 

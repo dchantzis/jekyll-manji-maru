@@ -12,7 +12,7 @@
   position: absolute;
   top: 0;
   height: 100%;
-  width: 50%;
+  width: 33.33%;
   cursor: pointer;
   z-index: 2;
 
@@ -20,10 +20,6 @@
   -webkit-transition: all 250ms linear;
   -o-transition: all 250ms linear;
   transition: all 250ms linear;
-}
-
-.album-cover-carousel .carousel-controls-container:hover {
-
 }
 
 .album-cover-carousel .carousel-controls-previous {
@@ -181,7 +177,7 @@
 @media only screen and (min-width: 25em) {
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 50em) {
 
   .album-cover-carousel .carousel-item-content {
     width: auto;
