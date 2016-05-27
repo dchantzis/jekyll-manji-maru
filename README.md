@@ -19,6 +19,7 @@ This theme includes the following:
 - Posts pagination
 - Album pagination
 - Related posts
+- Tag filtering of posts
 - Contact form using [formspree.io/](https://formspree.io/)
 - Integrating Google analytics and themed Google maps
 - Google fonts (Roboto, Abel, Lora)
