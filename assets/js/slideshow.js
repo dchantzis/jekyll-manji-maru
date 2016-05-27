@@ -24,7 +24,6 @@ $(window).load(function(){
       } else {
         $(this).addClass("horizontal");
       }
-
     });
 
     var closeSlideshow = function() {

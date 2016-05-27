@@ -53,40 +53,40 @@ This theme includes the following:
 
 **Home page: Light theme**
 
-![Image 1](http://dchantzis.github.io/jekyll-manji-maru/assets/img/screenshots/screenshot-1.jpg)
+![Image 1](http://dchantzis.github.io/jekyll-manji-maru/assets/img/screenshots/screenshot-1.png)
 
 ---
 
 **Home page: Dark theme**
 
-![Image 2](http://dchantzis.github.io/jekyll-manji-maru/assets/img/screenshots/screenshot-2.jpg)
+![Image 2](http://dchantzis.github.io/jekyll-manji-maru/assets/img/screenshots/screenshot-2.png)
 
 ---
 
 **Navigation: Tablet version**
 
-![Image 3](http://dchantzis.github.io/jekyll-manji-maru/assets/img/screenshots/screenshot-3.jpg)
+![Image 3](http://dchantzis.github.io/jekyll-manji-maru/assets/img/screenshots/screenshot-3.png)
 
 ---
 
 **Album page**
 
-![Image 4](http://dchantzis.github.io/jekyll-manji-maru/assets/img/screenshots/screenshot-4.jpg)
+![Image 4](http://dchantzis.github.io/jekyll-manji-maru/assets/img/screenshots/screenshot-4.png)
 
 ---
 
 **Album page: Image lightbox**
 
-![Image 4](http://dchantzis.github.io/jekyll-manji-maru/assets/img/screenshots/screenshot-4.jpg)
+![Image 4](http://dchantzis.github.io/jekyll-manji-maru/assets/img/screenshots/screenshot-5.png)
 
 ---
 
 **Album page: Tablet version**
 
-![Image 5](http://dchantzis.github.io/jekyll-manji-maru/assets/img/screenshots/screenshot-5.jpg)
+![Image 5](http://dchantzis.github.io/jekyll-manji-maru/assets/img/screenshots/screenshot-6.png)
 
 ---
 
 **Contact page**
 
-![Image 7](http://dchantzis.github.io/jekyll-manji-maru/assets/img/screenshots/screenshot-7.jpg)
+![Image 7](http://dchantzis.github.io/jekyll-manji-maru/assets/img/screenshots/screenshot-7.png)
