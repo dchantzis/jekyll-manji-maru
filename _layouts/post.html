@@ -28,9 +28,6 @@ layout: default
         {% assign post = page %}
         {% include posts-time-to-read.html %}
         <div class="push-0 milli p-container">{{ content | markdownify }}</div>
-        <div class="social-share-buttons">
-          {% include social-share-buttons.html %}
-        </div>
 
         {% assign post_images = "" | split:"|" %}
         {% for image in page.images %}
@@ -45,12 +42,16 @@ layout: default
         {% endfor %}
 
         {% if post_images.size >= 1 %}
-          <div class="push-0 pad-t">
+          <div class="push-0 pad-t-1-2">
             {% for image in post_images %}
               {% include post-image.html %}
             {% endfor %}
           </div>
         {% endif %}
+
+        <div class="social-share-buttons">
+          {% include social-share-buttons.html %}
+        </div>
 
       </article>
 

@@ -110,13 +110,13 @@ body {
   margin-bottom: 0.3500rem;
 }
 
-.p-container img {
-  display: block;
-  width: 100%;
+.p-container img,
+.post .graphic img {
+  width: auto;
+  padding-top: 0.700rem;
+  padding-bottom: 0.700rem;
 }
 
-.graphic img {
-}
 .graphic figcaption {
   text-align: left;
   color: rgba(117, 115, 115, 1);
@@ -352,11 +352,7 @@ tbody tr:nth-child(odd) th {
     padding-right: 1.4rem;
   }
 
-  section.simple .restricted-content {
-    width: 40rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
+
 
 }
 
@@ -389,7 +385,8 @@ tbody tr:nth-child(odd) th {
     margin-right: auto;
   }
 
-  section.contact .restricted-content {
+  section.contact .restricted-content,
+  section.simple .restricted-content {
     width: 40rem;
     margin-left: auto;
     margin-right: auto;
@@ -405,9 +402,10 @@ tbody tr:nth-child(odd) th {
     margin-right: auto;
   }
 
-  section.contact .restricted-content {
+  section.contact .restricted-content,
+  section.simple .restricted-content {
     width: 40rem;
-        margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
   }
 

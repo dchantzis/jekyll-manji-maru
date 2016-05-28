@@ -12,6 +12,7 @@ sectionClass: post
 category: news
 comments: true
 isFamilyFriendly: true
+display-social-media-share-buttons: false
 tags:
   - tag 1
 related:
