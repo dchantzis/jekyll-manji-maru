@@ -7,7 +7,7 @@
 
 .js-slideshow-container-fade {
   opacity: 1;
-  z-index: 20;
+  z-index: 62;
 }
 
 .active-slideshow {
@@ -21,13 +21,18 @@
   right: 0rem;
   bottom: 0rem;
 
+  text-align: center;
+
   background-color: rgba(255, 255, 255, 1);
   width: 100%;
   transform-origin: center center;
   opacity: 1;
-  transition: all 250ms ease;
 
-  text-align: center;
+  -moz-transition: all 250ms ease-in;
+  -o-transition: all 250ms ease-in;
+  -webkit-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
+
 }
 
 .slideshow-images li {
@@ -105,7 +110,7 @@ li.js-slideshow-navigation-selected {
   height: 100%;
   width: 50%;
   cursor: pointer;
-  z-index: 25;
+  z-index: 63;
 
   -webkit-transition: all 100ms linear;
   -moz-transition: all 100ms linear;
@@ -163,8 +168,7 @@ li.js-slideshow-navigation-selected {
   top: 0;
   right: 0;
   cursor: pointer;
-  z-index: 26;
-
+  z-index: 64;
 
   -webkit-transition: all 100ms linear;
   -moz-transition: all 100ms linear;
