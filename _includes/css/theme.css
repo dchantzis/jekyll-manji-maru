@@ -113,6 +113,7 @@ body {
 .p-container img,
 .post .graphic img {
   width: auto;
+  max-width: 100%;
   padding-top: 0.700rem;
   padding-bottom: 0.700rem;
 }

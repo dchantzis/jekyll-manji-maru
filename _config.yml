@@ -21,7 +21,7 @@ google-api-key:
 analytics :
   provider : google
   google :
-    tracking_id : ''
+    tracking_id :
 google-maps:
   latitude: 36.3577559
   longitude: 25.7688347
