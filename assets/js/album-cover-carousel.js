@@ -58,11 +58,11 @@ $(window).load(function(){
         }
       }
     });
-/*
+
     setInterval(function(){
       slideNextItem();
     }, carouselInteval);
-*/
+
   }
 
 });
