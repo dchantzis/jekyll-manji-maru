@@ -25,6 +25,7 @@ display-info: false
 display-social-media-share-buttons: false
 enableLightbox: true
 enableCarousel: false
+enablePagination: true
 parentPage: collection 1
 sitemap:
   lastMod: 2016-01-01
