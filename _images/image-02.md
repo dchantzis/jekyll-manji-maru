@@ -13,8 +13,8 @@ includeInNavigation: false
 weight: 0
 isFamilyFriendly: true
 includeAlbumGrid: true
-fullsize-src: https://placeholdit.imgix.net/~text?txtsize=84&bg=cccccc&txt=1240x876&w=1240&h=876
-thumbnail-src: https://placeholdit.imgix.net/~text?txtsize=84&bg=cccccc&txt=440x293&w=440&h=293
+fullsize-src: http://placehold.it/1240x876/cccccc/969696&text=1240x876
+thumbnail-src: http://placehold.it/440x293/cccccc/969696&text=440x293
 date-created: 2016
 dimensions: 9 x 10 cm
 description: Image description text

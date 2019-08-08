@@ -13,7 +13,7 @@ includeInNavigation: true
 weight: 0
 isFamilyFriendly: true
 cover:
-  image: https://placeholdit.imgix.net/~text?txtsize=84&bg=F2E0CB&txt=album-4&w=1653&h=1167
+  image: http://placehold.it/1653x1167/F2E0CB/969696&text=album-4
   theme: dark
 description: Album 04 description
 client: personal
